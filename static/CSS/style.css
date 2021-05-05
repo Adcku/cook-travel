@@ -1,0 +1,88 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #0b141d;
+}
+body {
+  background-color: #e1ebf4;
+  margin: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-image: url("../images/fon-top.jpg");
+  background-size: cover;
+  background-position-x: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+header nav {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 615px;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline;
+  padding: 0 10px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header .logo {
+  position: absolute;
+  top: 40px;
+  left: 33px;
+  font-size: 24px;
+  text-shadow: 2px 2px #f8d930;
+}
+header section.icons {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+header section.icons ul li {
+  display: inline;
+  padding: 0 7px;
+}
+header section.icons a {
+  text-decoration: none;
+}
+
+header section.title {
+  position: absolute;
+  top: 207px;
+  left: 33px;
+}
+header section.title h1 {
+  font-size: 80px;
+  text-shadow: 3px 3px #f8d930;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+header section.title p {
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+header section.title a {
+  background-color: #f8d930;
+  padding: 18px 71px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 20px;
+}
+header section.title a:hover {
+  background-color: #f1eac4;
+}
