@@ -1,90 +1,96 @@
 * {
-  font-family: "Montserrat", sans-serif;
-  color: #0b141d;
+  font-family: "Montserrat", sans-serif; /*Шрифт (в данном случае применен ко всему документу)*/
+  color: #0b141d; /*Цвет шрифта*/
 }
 body {
-  background-color: #e1ebf4;
-  margin: 0;
+  background-color: #e1ebf4; /*Цвет поля вокруг картинки*/
+  margin: 0; /*Отступ вокруг картинки или поля (в данном случае их нет)*/
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  /*Ограничение для картинки*/
+  max-width: 1200px; /*Размер картинки (разрешение px)*/
+  margin: 0 auto; /*Положение картинки (положение по центру)*/
 }
 header {
-  background-image: url("../images/fon-top.jpg");
-  background-size: cover;
-  background-position-x: center;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+  background-image: url("../images/fon-top.jpg"); /*Картинка первого блока*/
+  background-size: cover; /*Растяжка по ширине элементов*/
+  background-position-x: center; /*Центровка Картинки*/
+  height: 100vh; /*Размер экрана*/
+  width: 100%; /*Ширина картинки*/
+  position: relative; /*Родительская область*/
 }
 header nav {
-  position: absolute;
-  top: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 615px;
+  position: absolute; /*Дочерняя область*/
+  top: 45px; /*Отступ сверху*/
+  left: 50%; /*Отступ слева*/
+  transform: translateX(-50%); /*Сдвиг по горизонтали по Х*/
+  width: 615px; /*Положение меню относительно центра по горизонтали*/
 }
 header nav ul {
-  margin: 0;
-  padding: 0;
+  margin: 0; /*Отступ снаружи блока*/
+  padding: 0; /*Отступ снутри блока*/
 }
 header nav ul li {
-  display: inline;
-  padding: 0 10px;
+  display: inline; /*Превращаем блочный элемент в строчный*/
+  padding: 0 10px; /*Отступы*/
 }
 header nav ul li a {
-  text-decoration: none;
-  font-size: 18px;
+  text-decoration: none; /*Убирает подчеркивание текста*/
+  font-size: 18px; /*Размер шрифта меню*/
 }
 header nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /*При наведении на текст показывает подчеркивание*/
 }
 header .logo {
   position: absolute;
-  top: 40px;
-  left: 33px;
-  font-size: 24px;
-  text-shadow: 2px 2px #f8d930;
+  top: 40px; /*Отступ сверху*/
+  left: 33px; /*Отступ слева*/
+  font-size: 24px; /*Размер шрифта лого*/
+  text-shadow: 2px 2px #f8d930; /*Тень, толщина в px и цвет color*/
 }
 header section.icons {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 30px; /*Отступ сверху*/
+  right: 40px; /*Отступ справа*/
 }
 header section.icons ul li {
-  display: inline;
+  display: inline; /*Превращаем блочный элемент в строчный*/
   padding: 0 7px;
 }
 header section.icons a {
-  text-decoration: none;
+  text-decoration: none; /*Убирает подчеркивание текста*/
 }
 header section.icons svg:hover {
-  fill: tomato;
+  /*При наведении курсора делает иконку активной, меняет цвет*/
+  fill: tomato; /*Цвет иконки при наведении*/
 }
 header section.title {
+  /*Заголовок*/
   position: absolute;
-  top: 207px;
-  left: 33px;
+  top: 207px; /*Отступ сверху*/
+  left: 33px; /*Отступ слева*/
 }
 header section.title h1 {
-  font-size: 80px;
-  text-shadow: 3px 3px #f8d930;
-  font-weight: 500;
-  font-style: normal;
+  font-size: 80px; /*Размер шрифта заголовка*/
+  text-shadow: 3px 3px #f8d930; /*Толщина обводки (тени) заголовка*/
+  font-weight: 500; /*Ширина шрифта заголовка*/
+  font-style: normal; /*РНачертание шрифта заголовка*/
   margin-bottom: 0;
 }
 header section.title p {
-  font-size: 30px;
-  margin-bottom: 70px;
+  /*Подзаголовок*/
+  font-size: 30px; /*Размер шрифта подзаголовка*/
+  margin-bottom: 70px; /*внешний отступ внизу элемента*/
 }
 header section.title a {
-  background-color: #f8d930;
-  padding: 18px 71px;
-  border-radius: 3px;
+  /*Кнопка*/
+  background-color: #f8d930; /*Цвет кнопки*/
+  padding: 18px 71px; /*Положение надписи относительно области кнопки*/
+  border-radius: 3px; /*Закругление углов кнопки*/
   text-decoration: none;
-  font-size: 20px;
+  font-size: 20px; /*Размер шрифта надписи*/
 }
 header section.title a:hover {
-  background-color: #f1eac4;
+  /*При наведении меняет цвет т.е активность*/
+  background-color: #f1eac4; /*цвет активности*/
 }
