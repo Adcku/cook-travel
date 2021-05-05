@@ -59,7 +59,9 @@ header section.icons ul li {
 header section.icons a {
   text-decoration: none;
 }
-
+header section.icons svg:hover {
+  fill: tomato;
+}
 header section.title {
   position: absolute;
   top: 207px;
