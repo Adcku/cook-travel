@@ -14,13 +14,13 @@ body {
 header {
   background-image: url("../images/fon-top.jpg"); /*Картинка первого блока*/
   background-size: cover; /*Растяжка по ширине элементов*/
-  background-position-x: center; /*Центровка Картинки*/
+  background-position-x: center; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
   height: 100vh; /*Размер экрана*/
   width: 100%; /*Ширина картинки*/
   position: relative; /*Родительская область*/
 }
 header nav {
-  position: absolute; /*Дочерняя область*/
+  position: absolute; /*способ позиционирования элемента относительно окна браузера*/
   top: 45px; /*Отступ сверху*/
   left: 50%; /*Отступ слева*/
   transform: translateX(-50%); /*Сдвиг по горизонтали по Х*/
@@ -66,7 +66,7 @@ header section.icons svg:hover {
 }
 header section.title {
   /*Заголовок*/
-  position: absolute;
+  position: absolute; /*способ позиционирования элемента относительно окна браузера*/
   top: 207px; /*Отступ сверху*/
   left: 33px; /*Отступ слева*/
 }
@@ -93,4 +93,90 @@ header section.title a {
 header section.title a:hover {
   /*При наведении меняет цвет т.е активность*/
   background-color: #f1eac4; /*цвет активности*/
+}
+
+/*блок обо мне*/
+section.about {
+  background-color: white; /*цвет заднего фона 2 блока*/
+  height: 750px; /*высота блока*/
+}
+/*левая часть блока*/
+section.about div.left {
+  float: left; /*левая часть 2 блока (float  команда устарела в данный момент используют другие особенно для адаптивных сайтов)*/
+  width: 750px; /*ширина левого блока*/
+  height: 750px;
+  position: relative; /*способ позиционирования элемента внутри*/
+}
+
+section.about div.left div.men {
+  width: 457px;
+  height: 740px;
+  background-image: url("../images/men.png");
+  background-position-x: -210px; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
+  position: absolute;
+  bottom: 0px;
+}
+
+section.about div.left div.number-30 {
+  position: absolute;
+  width: 160px;
+  height: 70px;
+  top: 220px;
+  left: 370px;
+}
+
+section.about div.left div.number-30 div.text-top {
+  position: absolute;
+  top: 0px;
+  font-size: 14px;
+}
+
+section.about div.left div.number-30 div.num {
+  font-weight: 900;
+  font-size: 80px;
+  -webkit-text-stroke: 1px #0b141d; /*определяет ширину контура текста, работает только в браузере  google*/
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  line-height: 60px;
+}
+
+section.about div.left div.number-30 div.text-bottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 14px;
+}
+
+/*правая часть блока*/
+section.about div.right {
+  width: 450px; /*ширина правого блока*/
+  float: left;
+  position: relative; /*способ позиционирования элемента внутри*/
+  height: 750px; /*высота правого блока*/
+}
+section.about div.right h2 {
+  font-size: 16px; /*размер шрифта*/
+  text-transform: uppercase; /*Управляет преобразованием текста элемента в заглавные или прописные символы.*/
+  font-style: normal; /*начертание шрифта*/
+  font-weight: 400; /*определяет толщину текста исходя из размера например 400-normal,700-bold*/
+  margin: 90px 0 100px 0;
+}
+section.about div.right p {
+  margin-bottom: 60px;
+}
+section.about div.right p.description {
+  font-size: 30px; /*размер шрифта*/
+  line-height: 140%; /*интерлиньяж - межстрочный интервал*/
+}
+section.about div.right div.list {
+  position: absolute;
+  width: 250px; /*ширина изображения*/
+  height: 220px; /*высота изображения*/
+  background-image: url("../images/list.jpg");
+  background-position-y: 0px; /*Задает положение фонового изображения внутри элемента по вертикали.*/
+  right: 0px; /*определяет расстояние от правого края родительского элемента, не включая отступ, поле и ширину рамки, до правого края дочернего элемента.*/
+  bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
+  transform: matrix(-1, 0, 0, 1, 0, 0); /*трансформация объекта*/
 }
