@@ -17,56 +17,57 @@ header {
   background-position-x: center; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
   height: 100vh; /*Размер экрана*/
   width: 100%; /*Ширина картинки*/
-  position: relative; /*Родительская область*/
+  position: relative; /*Относительное позиционирование/родительская область*/
 }
 header nav {
-  position: absolute; /*способ позиционирования элемента относительно окна браузера*/
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
   top: 45px; /*Отступ сверху*/
   left: 50%; /*Отступ слева*/
   transform: translateX(-50%); /*Сдвиг по горизонтали по Х*/
   width: 615px; /*Положение меню относительно центра по горизонтали*/
 }
 header nav ul {
-  margin: 0; /*Отступ снаружи блока*/
-  padding: 0; /*Отступ снутри блока*/
+  margin: 0; /*Внешний отступ элемента*/
+  padding: 0; /*внутренний отступ между контентом и границей элемента..*/
 }
 header nav ul li {
   display: inline; /*Превращаем блочный элемент в строчный*/
-  padding: 0 10px; /*Отступы*/
+  padding: 0 10px; /*внутренний отступ между контентом и границей элемента..*/
 }
 header nav ul li a {
   text-decoration: none; /*Убирает подчеркивание текста*/
   font-size: 18px; /*Размер шрифта меню*/
 }
 header nav ul li a:hover {
+  /*hover/При наведении курсора делает иконку активной, меняет цвет*/
   text-decoration: underline; /*При наведении на текст показывает подчеркивание*/
 }
 header .logo {
-  position: absolute;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
   top: 40px; /*Отступ сверху*/
   left: 33px; /*Отступ слева*/
   font-size: 24px; /*Размер шрифта лого*/
   text-shadow: 2px 2px #f8d930; /*Тень, толщина в px и цвет color*/
 }
 header section.icons {
-  position: absolute;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
   top: 30px; /*Отступ сверху*/
   right: 40px; /*Отступ справа*/
 }
 header section.icons ul li {
   display: inline; /*Превращаем блочный элемент в строчный*/
-  padding: 0 7px;
+  padding: 0 7px; /*внутренний отступ между контентом и границей элемента..*/
 }
 header section.icons a {
   text-decoration: none; /*Убирает подчеркивание текста*/
 }
 header section.icons svg:hover {
-  /*При наведении курсора делает иконку активной, меняет цвет*/
+  /*hover/При наведении курсора делает иконку активной, меняет цвет*/
   fill: tomato; /*Цвет иконки при наведении*/
 }
 header section.title {
   /*Заголовок*/
-  position: absolute; /*способ позиционирования элемента относительно окна браузера*/
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
   top: 207px; /*Отступ сверху*/
   left: 33px; /*Отступ слева*/
 }
@@ -75,103 +76,167 @@ header section.title h1 {
   text-shadow: 3px 3px #f8d930; /*Толщина обводки (тени) заголовка*/
   font-weight: 500; /*Ширина шрифта заголовка*/
   font-style: normal; /*РНачертание шрифта заголовка*/
-  margin-bottom: 0;
+  margin-bottom: 0; /*величина внешнего отступа от нижнего края элемента*/
 }
 header section.title p {
   /*Подзаголовок*/
   font-size: 30px; /*Размер шрифта подзаголовка*/
-  margin-bottom: 70px; /*внешний отступ внизу элемента*/
+  margin-bottom: 70px; /*величина внешнего отступа от нижнего края элемента*/
 }
 header section.title a {
   /*Кнопка*/
   background-color: #f8d930; /*Цвет кнопки*/
-  padding: 18px 71px; /*Положение надписи относительно области кнопки*/
+  padding: 18px 71px; /*внутренний отступ между контентом и границей элемента..*/
   border-radius: 3px; /*Закругление углов кнопки*/
   text-decoration: none;
   font-size: 20px; /*Размер шрифта надписи*/
 }
 header section.title a:hover {
-  /*При наведении меняет цвет т.е активность*/
+  /*hover/При наведении курсора делает иконку активной, меняет цвет*/
   background-color: #f1eac4; /*цвет активности*/
 }
 
 /*блок обо мне*/
 section.about {
   background-color: white; /*цвет заднего фона 2 блока*/
-  height: 750px; /*высота блока*/
+  height: 750px; /*высота элемента*/
 }
 /*левая часть блока*/
 section.about div.left {
   float: left; /*левая часть 2 блока (float  команда устарела в данный момент используют другие особенно для адаптивных сайтов)*/
-  width: 750px; /*ширина левого блока*/
-  height: 750px;
-  position: relative; /*способ позиционирования элемента внутри*/
+  width: 750px; /*ширина элемента*/
+  height: 750px; /*высота элемента*/
+  position: relative; /*Относительное позиционирование/родительская область*/
 }
 
 section.about div.left div.men {
-  width: 457px;
-  height: 740px;
+  width: 457px; /*ширина элемента*/
+  height: 740px; /*высота элемента*/
   background-image: url("../images/men.png");
   background-position-x: -210px; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
-  position: absolute;
-  bottom: 0px;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
 }
 
 section.about div.left div.number-30 {
-  position: absolute;
-  width: 160px;
-  height: 70px;
-  top: 220px;
-  left: 370px;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  width: 160px; /*ширина элемента*/
+  height: 70px; /*высота элемента*/
+  top: 220px; /*позиционирование элемента сверху*/
+  left: 370px; /*позиционирование элемента слева*/
 }
 
 section.about div.left div.number-30 div.text-top {
-  position: absolute;
-  top: 0px;
-  font-size: 14px;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 0px; /*позиционирование элемента сверху*/
+  font-size: 14px; /*размер шрифта*/
 }
 
 section.about div.left div.number-30 div.num {
-  font-weight: 900;
-  font-size: 80px;
+  font-weight: 900; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  font-size: 80px; /*размер шрифта*/
   -webkit-text-stroke: 1px #0b141d; /*определяет ширину контура текста, работает только в браузере  google*/
   color: #fff;
-  position: absolute;
-  top: 0px;
-  left: 35px;
-  line-height: 60px;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 0px; /*позиционирование элемента сверху*/
+  left: 35px; /*позиционирование элемента слева*/
+  line-height: 60px; /*интерлиньяж - межстрочный интервал*/
 }
 
 section.about div.left div.number-30 div.text-bottom {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  font-size: 14px;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  right: 0px; /*позиционирование элемента справа*/
+  bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
+  font-size: 14px; /*размер шрифта*/
+}
+
+section.about div.left div.two-title {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  width: 160px; /*ширина элемента*/
+  height: 70px; /*высота элемента*/
+  top: 390px; /*позиционирование элемента сверху*/
+  left: 410px; /*позиционирование элемента слева*/
+}
+
+section.about div.left div.two-title div.top-title {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 0px; /*позиционирование элемента сверху*/
+  font-size: 14px; /*размер шрифта*/
+}
+
+section.about div.left div.two-title div.number {
+  font-weight: 900; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  font-size: 80px; /*размер шрифта*/
+  -webkit-text-stroke: 1px #0b141d; /*определяет ширину контура текста, работает только в браузере  google*/
+  color: #fff;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 5px; /*позиционирование элемента сверху*/
+  left: 65px; /*позиционирование элемента слева*/
+  line-height: 60px; /*интерлиньяж - межстрочный интервал*/
+}
+
+section.about div.left div.two-title div.bottom-title {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  right: -60px; /*позиционирование элемента справа*/
+  bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
+  font-size: 14px; /*размер шрифта*/
+}
+
+section.about div.left div.free-title {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  width: 160px; /*ширина элемента*/
+  height: 70px; /*высота элемента*/
+  top: 570px; /*позиционирование элемента сверху*/
+  left: 380px; /*позиционирование элемента слева*/
+}
+
+section.about div.left div.free-title div.toptitle {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 0px; /*позиционирование элемента сверху*/
+  font-size: 14px; /*размер шрифта*/
+}
+
+section.about div.left div.free-title div.number-title {
+  font-weight: 900; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  font-size: 80px; /*размер шрифта*/
+  -webkit-text-stroke: 1px #0b141d; /*определяет ширину контура текста, работает только в браузере  google*/
+  color: #fff;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  top: 5px; /*позиционирование элемента сверху*/
+  left: 60px; /*позиционирование элемента слева*/
+  line-height: 60px; /*интерлиньяж - межстрочный интервал*/
+}
+
+section.about div.left div.free-title div.bottomtitle {
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
+  right: -125px; /*позиционирование элемента справа*/
+  bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
+  font-size: 14px; /*размер шрифта*/
 }
 
 /*правая часть блока*/
 section.about div.right {
   width: 450px; /*ширина правого блока*/
-  float: left;
-  position: relative; /*способ позиционирования элемента внутри*/
-  height: 750px; /*высота правого блока*/
+  float: left; /*Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон.*/
+  position: relative; /*Относительное позиционирование/родительская область*/
+  height: 750px; /*высота правого элемента*/
 }
 section.about div.right h2 {
   font-size: 16px; /*размер шрифта*/
   text-transform: uppercase; /*Управляет преобразованием текста элемента в заглавные или прописные символы.*/
   font-style: normal; /*начертание шрифта*/
-  font-weight: 400; /*определяет толщину текста исходя из размера например 400-normal,700-bold*/
-  margin: 90px 0 100px 0;
+  font-weight: 400; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  margin: 90px 0 100px 0; /*Внешний отступ элемента*/
 }
 section.about div.right p {
-  margin-bottom: 60px;
+  margin-bottom: 60px; /*величина внешнего отступа от нижнего края элемента*/
 }
 section.about div.right p.description {
   font-size: 30px; /*размер шрифта*/
   line-height: 140%; /*интерлиньяж - межстрочный интервал*/
 }
 section.about div.right div.list {
-  position: absolute;
+  position: absolute; /*Абсолютное позиционирование/дочерняя область*/
   width: 250px; /*ширина изображения*/
   height: 220px; /*высота изображения*/
   background-image: url("../images/list.jpg");
