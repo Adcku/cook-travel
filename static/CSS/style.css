@@ -59,7 +59,7 @@ header section.icons ul li {
   padding: 0 7px; /*внутренний отступ между контентом и границей элемента..*/
 }
 header section.icons a {
-  text-decoration: none; /*Убирает подчеркивание текста*/
+  text-decoration: none; /*В данном случае Убирает подчеркивание текста*/
 }
 header section.icons svg:hover {
   /*hover/При наведении курсора делает иконку активной, меняет цвет*/
@@ -75,7 +75,7 @@ header section.title h1 {
   font-size: 80px; /*Размер шрифта заголовка*/
   text-shadow: 3px 3px #f8d930; /*Толщина обводки (тени) заголовка*/
   font-weight: 500; /*Ширина шрифта заголовка*/
-  font-style: normal; /*РНачертание шрифта заголовка*/
+  font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
   margin-bottom: 0; /*величина внешнего отступа от нижнего края элемента*/
 }
 header section.title p {
@@ -88,7 +88,7 @@ header section.title a {
   background-color: #f8d930; /*Цвет кнопки*/
   padding: 18px 71px; /*внутренний отступ между контентом и границей элемента..*/
   border-radius: 3px; /*Закругление углов кнопки*/
-  text-decoration: none;
+  text-decoration: none; /*В данном случае Убирает подчеркивание текста*/
   font-size: 20px; /*Размер шрифта надписи*/
 }
 header section.title a:hover {
@@ -224,7 +224,7 @@ section.about div.right {
 section.about div.right h2 {
   font-size: 16px; /*размер шрифта*/
   text-transform: uppercase; /*Управляет преобразованием текста элемента в заглавные или прописные символы.*/
-  font-style: normal; /*начертание шрифта*/
+  font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
   font-weight: 400; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
   margin: 90px 0 100px 0; /*Внешний отступ элемента*/
 }
@@ -244,4 +244,45 @@ section.about div.right div.list {
   right: 0px; /*определяет расстояние от правого края родительского элемента, не включая отступ, поле и ширину рамки, до правого края дочернего элемента.*/
   bottom: 0px; /*Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов.*/
   transform: matrix(-1, 0, 0, 1, 0, 0); /*трансформация объекта*/
+}
+
+section.slider {
+  width: 100%; /*ширина*/
+  height: 700px; /*высота*/
+  background-image: url("../images/slide1.jpg");
+  background-size: cover; /*Растяжка по ширине элементов*/
+  background-position-x: center; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
+}
+main {
+  background-color: #fff;
+}
+main h2 {
+  padding: 90px 0 30px 742px; /*Внешний отступ элемента*/
+  font-size: 16px; /*размер шрифта*/
+  text-transform: uppercase; /*Управляет преобразованием текста элемента в заглавные или прописные символы.*/
+  font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
+  font-weight: 400; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+}
+
+table {
+  width: 96%; /*ширина*/
+  margin: 0 20px; /*отступы*/
+}
+
+th {
+  text-align: left; /*Выравнивание текста по левому краю*/
+  font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
+  font-weight: normal; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  font-size: 30px; /*размер шрифта*/
+}
+
+td,
+th {
+  border-bottom: #f8d930 2px solid; /*цвет и толщина линии*/
+}
+td {
+  height: 117px; /*высота строки таблице в данном случае*/
+}
+.muted {
+  color: #b4b4b4;
 }
