@@ -286,3 +286,71 @@ td {
 .muted {
   color: #b4b4b4;
 }
+
+article {
+  padding-top: 80px;
+  background-color: #fff;
+  width: 100%; /*ширина*/
+  height: 700px; /*высота*/
+}
+
+article .left {
+  width: 700px; /*ширина*/
+  /*height: 500px;*/ /*высота*/
+  float: left; /*Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон.*/
+}
+.row {
+  display: flex; /*Блочный флекс контейнер*/
+  margin-bottom: 20px;
+}
+.foto1,
+.foto2,
+.foto3,
+.foto4,
+.foto5,
+.foto6 {
+  margin-right: 15px;
+  height: 200px; /*высота*/
+}
+.left .foto1 {
+  width: 262px; /*ширина*/
+  background-image: url("../images/img1.jpg");
+  background-position-x: center; /*Задает положение изображения внутри элемента по горизонтали.*/
+}
+.left .foto2 {
+  width: 183px; /*ширина*/
+  background-image: url("../images/img2.jpg");
+  background-position-x: center; /*Задает положение изображения внутри элемента по горизонтали.*/
+}
+.left .foto3 {
+  width: 219px; /*ширина*/
+  background-image: url("../images/img3.jpg");
+}
+
+.left .foto4 {
+  width: 341px; /*ширина*/
+  background-image: url("../images/img4.jpg");
+  background-position-x: center; /*Задает положение изображения внутри элемента по горизонтали.*/
+}
+.left .foto5 {
+  width: 183px; /*ширина*/
+  background-image: url("../images/img5.jpg");
+  background-position-x: 0px; /*Задает положение изображения внутри элемента по горизонтали.*/
+}
+.left .foto6 {
+  width: 140px; /*ширина*/
+  background-image: url("../images/img6.jpg");
+  background-position-x: -85px; /*Задает положение изображения внутри элемента по горизонтали.*/
+}
+article .right {
+  float: right;
+  width: 480px; /*ширина*/
+}
+article .right ul {
+  list-style-type: none;
+}
+
+article .right p {
+  margin-top: 40px;
+  margin: left 40px;
+}
