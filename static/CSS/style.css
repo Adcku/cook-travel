@@ -1,3 +1,6 @@
+:root {
+  --color-yellow: #f8d930; /*Переменная позволяет сразу менять цвет кнопок*/
+}
 * {
   font-family: "Montserrat", sans-serif; /*Шрифт (в данном случае применен ко всему документу)*/
   color: #0b141d; /*Цвет шрифта*/
@@ -47,7 +50,7 @@ header .logo {
   top: 40px; /*Отступ сверху*/
   left: 33px; /*Отступ слева*/
   font-size: 24px; /*Размер шрифта лого*/
-  text-shadow: 2px 2px #f8d930; /*Тень, толщина в px и цвет color*/
+  text-shadow: 2px 2px var(--color-yellow); /*Тень, толщина в px и цвет color*/
 }
 header section.icons {
   position: absolute; /*Абсолютное позиционирование/дочерняя область*/
@@ -73,7 +76,7 @@ header section.title {
 }
 header section.title h1 {
   font-size: 80px; /*Размер шрифта заголовка*/
-  text-shadow: 3px 3px #f8d930; /*Толщина обводки (тени) заголовка*/
+  text-shadow: 3px 3px var(--color-yellow); /*Толщина обводки (тени) заголовка*/
   font-weight: 500; /*Ширина шрифта заголовка*/
   font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
   margin-bottom: 0; /*величина внешнего отступа от нижнего края элемента*/
@@ -83,9 +86,10 @@ header section.title p {
   font-size: 30px; /*Размер шрифта подзаголовка*/
   margin-bottom: 70px; /*величина внешнего отступа от нижнего края элемента*/
 }
-header section.title a {
+header section.title a,
+article .right p .btn {
   /*Кнопка*/
-  background-color: #f8d930; /*Цвет кнопки*/
+  background-color: var(--color-yellow); /*Цвет кнопки*/
   padding: 18px 71px; /*внутренний отступ между контентом и границей элемента..*/
   border-radius: 3px; /*Закругление углов кнопки*/
   text-decoration: none; /*В данном случае Убирает подчеркивание текста*/
@@ -248,10 +252,14 @@ section.about div.right div.list {
 
 section.slider {
   width: 100%; /*ширина*/
-  height: 700px; /*высота*/
-  background-image: url("../images/slide1.jpg");
+  background-color: #fff;
+  /* padding-left: 20px; */
+  /* padding-right: 20px;
+  box-sizing: content-box; */
+  /*height: 700px;/*высота*/
+  /*background-image: url("../images/slide1.jpg");
   background-size: cover; /*Растяжка по ширине элементов*/
-  background-position-x: center; /*Задает положение фонового изображения внутри элемента по горизонтали.*/
+  /*background-position-x: center;*/ /*Задает положение фонового изображения внутри элемента по горизонтали.*/
 }
 main {
   background-color: #fff;
@@ -278,7 +286,7 @@ th {
 
 td,
 th {
-  border-bottom: #f8d930 2px solid; /*цвет и толщина линии*/
+  border-bottom: var(--color-yellow) 2px solid; /*цвет и толщина линии*/
 }
 td {
   height: 117px; /*высота строки таблице в данном случае*/
@@ -287,21 +295,21 @@ td {
   color: #b4b4b4;
 }
 
-article {
-  padding-top: 80px;
+article.foto {
+  padding-top: 80px; /*значение поля от верхнего края содержимого элемента*/
   background-color: #fff;
   width: 100%; /*ширина*/
-  height: 700px; /*высота*/
+  height: 450px; /*высота*/
 }
 
-article .left {
+article.foto .left {
   width: 700px; /*ширина*/
   /*height: 500px;*/ /*высота*/
   float: left; /*Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон.*/
 }
 .row {
   display: flex; /*Блочный флекс контейнер*/
-  margin-bottom: 20px;
+  margin-bottom: 20px; /*Устанавливает величину отступа от нижнего края элемента*/
 }
 .foto1,
 .foto2,
@@ -309,7 +317,7 @@ article .left {
 .foto4,
 .foto5,
 .foto6 {
-  margin-right: 15px;
+  margin-right: 15px; /*Устанавливает величину отступа от правого края элемента*/
   height: 200px; /*высота*/
 }
 .left .foto1 {
@@ -342,15 +350,60 @@ article .left {
   background-image: url("../images/img6.jpg");
   background-position-x: -85px; /*Задает положение изображения внутри элемента по горизонтали.*/
 }
-article .right {
-  float: right;
+article.foto .right {
+  float: right; /*Выравнивает элемент по правому краю, а все остальные элементы, вроде текста, обтекают его по левой стороне.*/
   width: 480px; /*ширина*/
 }
-article .right ul {
+article.foto .right ul {
   list-style-type: none;
 }
 
-article .right p {
-  margin-top: 40px;
-  margin: left 40px;
+article.foto .right p {
+  margin-top: 40px; /*Устанавливает величину отступа от верхнего края элемента*/
+  margin: left 40px; /*Устанавливает величину отступа от левого края элемента*/
+}
+
+article.blog {
+  background-color: #fff;
+  height: 1700px; /*высота*/
+}
+article.blog .left {
+  width: calc(1200px - 809px); /*ширина*/
+  float: left; /*Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.*/
+}
+
+article.blog h3 {
+  margin-top: 50px; /*Устанавливает величину отступа от верхнего края элемента*/
+  font-style: normal; /*начертание шрифта (обычное, курсивное, наклонное)*/
+  font-weight: normal; /*определяет насыщенность текста исходя из размера например 400-normal,700-bold*/
+  font-size: 30px; /*размер шрифта*/
+}
+
+article.blog h3,
+article.blog p {
+  margin-left: 30px; /*Устанавливает величину отступа от левого края элемента*/
+}
+
+article.blog .right {
+  width: 809px; /*ширина*/
+  height: 304px; /*высота*/
+  float: right; /*Выравнивает элемент по правому краю, а все остальные элементы, вроде текста, обтекают его по левой стороне.*/
+  background-image: url("../images/plan1.jpg");
+}
+
+.height {
+  clear: both; /*Устанавливает, с какой стороны элемента запрещено его обтекание другими элементами. Если задано обтекание элемента с помощью свойства float, то clear отменяет его действие для указанных сторон.*/
+  height: 100px; /*Высота*/
+}
+
+article.blog .left-2 {
+  float: left; /*Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.*/
+  width: 727px; /*ширина*/
+  height: 454px; /*высота*/
+  background-image: url("../images/plan2.jpg");
+}
+
+article.blog .right-2 {
+  float: right; /*Выравнивает элемент по правому краю, а все остальные элементы, вроде текста, обтекают его по левой стороне.*/
+  width: calc(1200px - 727px);
 }
