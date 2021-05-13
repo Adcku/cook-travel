@@ -394,6 +394,7 @@ article.blog .right {
 .height {
   clear: both; /*Устанавливает, с какой стороны элемента запрещено его обтекание другими элементами. Если задано обтекание элемента с помощью свойства float, то clear отменяет его действие для указанных сторон.*/
   height: 100px; /*Высота*/
+  width: 100%; /*ширина*/
 }
 
 article.blog .left-2 {
@@ -406,4 +407,39 @@ article.blog .left-2 {
 article.blog .right-2 {
   float: right; /*Выравнивает элемент по правому краю, а все остальные элементы, вроде текста, обтекают его по левой стороне.*/
   width: calc(1200px - 727px);
+}
+
+article.blog .right-2 h3,
+article.blog .right-2 p {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+article.blog .left-3 {
+  float: left;
+  width: calc(1200px - 425px);
+}
+
+article.blog .right-3 {
+  float: right;
+  width: 425px;
+  height: 513px;
+  background-image: url("../images/plan3.jpg");
+  background-position-x: center;
+}
+
+article.blog .left-3 h3 {
+  margin-top: 100px;
+}
+
+article.blog .left-3 h3,
+article.blog .left-3 p {
+  margin-left: 390px;
+}
+
+article.blog .left-3 .list-left {
+  position: absolute;
+  width: 247px;
+  height: 236px;
+  background-image: url("../images/list.jpg");
 }
